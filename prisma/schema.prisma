@@ -9,3 +9,17 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Place {
+  id    Int     @id @default(autoincrement())
+  name  String
+  meals Meal[]
+}
+
+model Meal {
+  id            Int     @id @default(autoincrement())
+  name          String
+  description   String
+  place         Place  @relation(fields: [placeId], references: [id])
+  placeId       Int
+}
