@@ -13,4 +13,13 @@ datasource db {
 model Place {
   id    Int     @id @default(autoincrement())
   name  String
+  meals Meal[]
+}
+
+model Meal {
+  id            Int     @id @default(autoincrement())
+  name          String
+  description   String
+  place         Place  @relation(fields: [placeId], references: [id])
+  placeId       Int
 }
