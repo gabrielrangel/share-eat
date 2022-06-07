@@ -16,7 +16,10 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@controller/*": ["./src/controller/*"]
+      "@lib/*": ["./lib/*"],
+      "@controller/*": ["./src/controller/*"],
+      "@service/*": ["./src/service/*"],
+      "@test/*": ["./test/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
