@@ -1,5 +1,5 @@
 import {Prisma} from "@prisma/client";
-import {placeCreateDataValidator} from "../../../../src/service/place/validate/placeCreateDataValidator";
+import {placeCreateDataValidator} from "@service/place/validate/placeCreateDataValidator";
 
 test('invalid create data', () => {
   const createData: Partial<Prisma.PlaceCreateInput> = {};
