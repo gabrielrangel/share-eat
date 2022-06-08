@@ -7,10 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "dotenv -e .env.test.local npx jest",
+    "prisma": "dotenv -e .env.local npx prisma",
+    "prisma:test": "dotenv -e .env.test.local npx prisma"
   },
   "dependencies": {
     "@prisma/client": "3.14.0",
+    "dotenv": "^16.0.1",
+    "dotenv-cli": "^5.1.0",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0"
